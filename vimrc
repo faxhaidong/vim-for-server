@@ -168,7 +168,9 @@ function! AutoSetFileHead()
     normal o
 endfunc
 
-autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+" 此处替换开启后会在无换行符的行下自动增加换行
+" autocmd FileType c,cpp,java,go,php,javascript,puppet,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,go,python,rust,twig,xml,yml,perl autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 fun! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
