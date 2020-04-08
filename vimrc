@@ -44,7 +44,7 @@ set tm=500
 
 
 " show location
-set cursorcolumn
+" set cursorcolumn
 set cursorline
 
 
@@ -252,3 +252,8 @@ cnoremap <C-j> <t_kd>
 cnoremap <C-k> <t_ku>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+" set CursorLine style
+set t_Co=256
+highlight CursorLine   cterm=NONE ctermbg=NONE ctermfg=blue guibg=NONE guifg=NONE
+" highlight cursorcolumn   cterm=NONE ctermbg=NONE ctermfg=green guibg=NONE guifg=NONE
